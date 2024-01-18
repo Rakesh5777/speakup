@@ -163,7 +163,7 @@ app.post("/findAccount", async (req, res) => {
       const protocol = req.protocol;
       const host = req.get('host');
       const hostname = host.split(':')[0];
-      const resetpass = `${protocol}://${hostname}:10000/resetpassword.html?token=${token}`;
+      const resetpass = `${protocol}://${hostname}/resetpassword.html?token=${token}`;
 
       const mailOptions = {
         from: {
