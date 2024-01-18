@@ -1,11 +1,12 @@
-
-const allow = localStorage.getItem("allow");
-if (allow != "allow") {
-  window.location.href = "/";
-}
-const authentication = localStorage.getItem("authorization");
-if (!authentication) {
-  window.location.href = "/";
+if (localStorage) {
+  const allow = localStorage.getItem("allow");
+  if (allow != "allow") {
+    window.location.href = "/";
+  }
+  const authentication = localStorage.getItem("authorization");
+  if (!authentication) {
+    window.location.href = "/";
+  }
 }
 const userID = document.querySelector(".userID");
 const userNames = document.querySelector(".userNames");
