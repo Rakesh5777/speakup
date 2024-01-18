@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1:27017/chat-app')
+mongoose.connect('mongodb+srv://rakeshreddyk5777:59ZHGIdmLJ8epFZF@speakup.1zdhclw.mongodb.net/')
   .then(() => console.log('Connected!'));
 const loginSchema = new mongoose.Schema({
     firstName:{
