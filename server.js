@@ -163,7 +163,7 @@ app.post("/findAccount", async (req, res) => {
       const protocol = req.protocol;
       const host = req.get('host');
       const hostname = host.split(':')[0];
-      const resetpass = `${protocol}://${hostname}::5001/resetpassword.html?token=${token}`;
+      const resetpass = `${protocol}://${hostname}:10000/resetpassword.html?token=${token}`;
 
       const mailOptions = {
         from: {
@@ -253,7 +253,7 @@ app.post("/storeChat", async (req, res) => {
     res.status(400).json({ success: false, msg: error.message });
   }
 });
-const port = process.env.PORT || 5001;
+const port = process.env.PORT || 10000;
 server.listen(port, () => {
   console.log(`Server running on port: ${port}`);
 });
